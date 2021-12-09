@@ -4,3 +4,23 @@
     justify-content: $justify;
     align-items: $align;
 }
+
+@mixin box($background){
+    @include flexbox($direction: column);
+    background: $background;
+    border-radius: 1rem;
+    height: 100px;
+    width: 300px;
+
+    &__value {
+        font-size: $big-font-size;
+        font-weight: $font-bold;
+    }
+
+    &__name {
+        font-size: $normal-font-size;
+        font-weight: $font-light;
+        letter-spacing: 0.3rem;
+        text-transform: uppercase;
+    }
+}

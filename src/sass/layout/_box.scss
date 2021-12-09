@@ -1,0 +1,21 @@
+@import '../Helpers/mixins';
+@import '../Helpers/variables';
+
+.boxes {
+    margin-top: 30px;
+    @include flexbox($direction: row);
+    gap: 20px;
+    color: $white;
+
+    &__confirmed {
+        @include box($background: $box1-background);
+    }
+
+    &__recovered {
+        @include box($background: $box2-background);
+    }
+
+    &__deaths {
+        @include box($background: $box3-background);
+    }
+}

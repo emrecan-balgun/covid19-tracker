@@ -3,7 +3,6 @@
 
 .header {
     @include flexbox($direction: column);
-    gap: 0;
 
     &__title {
         font-size: $mega-font-size;
