@@ -1,9 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
+import Information from "./Container/Information";
 
 function App() {
   return (
     <>
+      <Information />
     </>
   );
 }

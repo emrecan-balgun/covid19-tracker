@@ -1,10 +1,16 @@
 import React from 'react'
+import Chart from './Chart'
+import Header from './Header'
 
 function Information() {
     return (
-        <div>
-            
+        <>
+        <Header />
+        <div className="information">
+
         </div>
+        <Chart />
+        </>
     )
 }
 
