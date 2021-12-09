@@ -56,7 +56,7 @@ import {
   );
 
 
-function Charts() {
+function Table() {
     const state = {
         labels: ["Confirmed", "Recovered", "Deaths"],
         datasets:
@@ -76,4 +76,4 @@ function Charts() {
     )
 }
 
-export default Charts
+export default Table

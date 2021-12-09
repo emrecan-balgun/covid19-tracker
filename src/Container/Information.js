@@ -1,6 +1,6 @@
 import React from 'react'
 import Box from './Box'
-import Chart from './Chart'
+import Table from './Table'
 import Header from './Header'
 
 function Information() {
@@ -18,7 +18,7 @@ function Information() {
             </select>
             <Box />
         </div>
-        <Chart />
+        <Table />
         </>
     )
 }
