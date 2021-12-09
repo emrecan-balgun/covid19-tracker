@@ -1,0 +1,22 @@
+@import '../Helpers/mixins';
+@import '../Helpers/variables';
+
+.header {
+    @include flexbox($direction: column);
+    gap: 0;
+
+    &__title {
+        font-size: $mega-font-size;
+        font-weight: $font-black;
+        letter-spacing: 2px;
+    }
+
+    &__subtitle {
+        color: $third-color;
+        margin-top: -50px;
+        letter-spacing: -2px;
+        font-weight: $font-lighter;
+        font-size: $mediumer-font-size;
+    }  
+}
+
