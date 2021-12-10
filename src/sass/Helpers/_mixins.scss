@@ -24,3 +24,19 @@
         text-transform: uppercase;
     }
 }
+
+@mixin countryBox() {
+    @include flexbox($direction: column);
+
+        &__value {
+            font-size: $big-font-size;
+            font-weight: $font-bold;
+        }
+        
+        &__name {
+            font-size: $normal-font-size;
+            font-weight: $font-light;
+            letter-spacing: 0.3rem;
+            text-transform: uppercase;
+        }
+}

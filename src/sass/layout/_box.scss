@@ -2,7 +2,7 @@
 @import '../Helpers/variables';
 
 .boxes {
-    margin-top: 30px;
+    margin-top: 10px;
     @include flexbox($direction: row);
     gap: 20px;
     color: $white;

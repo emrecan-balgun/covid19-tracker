@@ -1,0 +1,39 @@
+@import '../Helpers/mixins';
+@import '../Helpers/variables';
+
+.countryBox {
+    margin-top: 10px;
+    @include flexbox($direction: row, $justify: space-around);
+    background: $box4-background;
+    width: 800px;
+    height: 100px;
+    border-radius: $radius;
+    color: $white;
+
+    &__information {
+        @include flexbox($direction: column);
+
+        &__country {
+            font-size: $bigger-font-size;
+            font-weight: $font-bold;
+        }
+    
+        &__time {
+            font-size: $smaller-font-size;
+            font-weight: $font-light;
+            text-transform: uppercase;
+        }
+    }
+
+    &__confirmed {
+        @include countryBox();
+    }
+
+    &__recovered {
+        @include countryBox();
+    }
+
+    &__deaths {
+        @include countryBox();
+    }
+}
