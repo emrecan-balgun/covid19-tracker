@@ -1,0 +1,13 @@
+@import '../Helpers/_variables.scss';
+
+.countries {
+    margin: 10px;
+    width: 200px;
+    border-radius: $radius;
+    padding: 4px;
+
+    &:focus {
+        min-width: 200px;
+        width: auto;
+    }
+}

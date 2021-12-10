@@ -13,17 +13,16 @@ function Countries() {
         .finally(() => setIsLoading(false))
     }, []);
 
+
     return (
-        <div>
-            <select defaultValue={'default'}>
-                {
-                    isLoading ? <option value="default">Loading..</option> : <option value="default" disabled  hidden>Global</option>
-                }
-                {
-                    countries.map(country => <option key={nanoid()} value={country.name.common}>{country.name.common}</option>)
-                }
-            </select>
-        </div>
+        <select className="countries" defaultValue={'default'}>
+            {
+                isLoading ? <option className="countries__loading" value="default">Loading..</option> : <option value="default" disabled  hidden>Global</option>
+            }
+            {
+                countries.map(country => <option key={nanoid()} className="countries__item" value={country.name.common}>{country.name.common}</option>)
+            }
+        </select>
     )
 }
 
