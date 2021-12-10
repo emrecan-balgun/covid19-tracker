@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { changeConfirmed, changeRecovered, changeDeaths, changeLastUpdate, lastUpdate, country, currentConfirmed, currentRecovered, currentDeaths, currentLastUpdate } from '../redux/covidSlice';
+import { changeConfirmed, changeRecovered, changeDeaths, changeLastUpdate, country, currentConfirmed, currentRecovered, currentDeaths, currentLastUpdate } from '../redux/covidSlice';
 import axios from 'axios';
 import Moment from 'react-moment';
 
@@ -29,7 +29,7 @@ function CountryBox() {
         <div className="countryBox">
             <div className="countryBox__information">
                 <span className="countryBox__information__country">{countryName}</span>
-                <span className="countryBox__information__time">Last update: <Moment format="Do MMM YYYY, hh:mm:ss">{lastUpdate}</Moment></span>
+                <span className="countryBox__information__time"><Moment format="Do MMM YYYY, hh:mm:ss">{lastUpdate}</Moment></span>
             </div>
             <div className="countryBox__confirmed">
                 <span className="countryBox__confirmed__value">{numberFormat.format(confirmed)}</span>
