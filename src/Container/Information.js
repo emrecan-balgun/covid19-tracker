@@ -1,6 +1,6 @@
 import React from 'react'
 import Box from './Box'
-import Table from './Table'
+// import Table from './Table'
 import Header from './Header'
 import Countries from './Countries'
 import CountryBox from './CountryBox'

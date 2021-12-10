@@ -4,6 +4,7 @@
 .boxes {
     margin-top: 10px;
     @include flexbox($direction: row);
+    width: 900px;
     gap: 20px;
     color: $white;
 
