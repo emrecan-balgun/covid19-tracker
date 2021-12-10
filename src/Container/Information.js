@@ -4,14 +4,33 @@ import Box from './Box'
 import Header from './Header'
 import Countries from './Countries'
 import CountryBox from './CountryBox'
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { changeGlobalConfirmed, changeGlobalRecovered, changeGlobalDeaths, changeGlobalLastUpdate, globalLastUpdate } from '../redux/covidSlice';
+import axios from 'axios';
 
 function Information() {
+    const dispatch = useDispatch();
+    const lastUpdate = useSelector(globalLastUpdate);
+
+    useEffect(() => {
+        axios('https://covid19.mathdro.id/api')
+        .then(response => dispatchData(response.data))
+    }, []);
+
+    function dispatchData(response) {
+        dispatch(changeGlobalConfirmed(response.confirmed.value));
+        dispatch(changeGlobalRecovered(response.recovered.value));
+        dispatch(changeGlobalDeaths(response.deaths.value));
+        dispatch(changeGlobalLastUpdate(response.lastUpdate));
+    }
+
     return (
         <>
         <Header />
         <div className="information">
             <h2 className="information__title">Global Data</h2>
-            <span className="information__time">Last update: 10.12.2021 00:15</span>
+            <span className="information__time">Last update: {lastUpdate}</span>
             <Box />
             <Countries />
             <CountryBox />

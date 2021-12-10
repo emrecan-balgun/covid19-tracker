@@ -1,10 +1,13 @@
-import React from 'react'
+import { useSelector  } from 'react-redux';
+import { country } from '../redux/covidSlice';
 
 function CountryBox() {
+    const countryName = useSelector(country);
+
     return (
         <div className="countryBox">
             <div className="countryBox__information">
-                <span className="countryBox__information__country">Turkey</span>
+                <span className="countryBox__information__country">{countryName}</span>
                 <span className="countryBox__information__time">Last update: 10.12.2021 00:15</span>
             </div>
             <div className="countryBox__confirmed">
