@@ -3,14 +3,17 @@ import { createSlice } from '@reduxjs/toolkit'
 export const covidSlice = createSlice({
   name: 'covid',
   initialState: {
-    country: 'Global',
+    country: 'global',
+
     globalConfirmed: 0,
     globalRecovered: 0,
     globalDeaths: 0,
     globalLastUpdate: '',
+
     currentConfirmed: 0,
     currentRecovered: 0,
     currentDeaths: 0,
+    currentLastUpdate: '',
   },
   reducers: {
       changeCountry: (state, action) => {
@@ -37,10 +40,23 @@ export const covidSlice = createSlice({
       changeDeaths: (state, action) => {
           state.currentDeaths = action.payload;
       },
+      changeLastUpdate: (state, action) => {
+          state.currentLastUpdate = action.payload;
+      }
   }
 })
 
-export const { changeCountry, changeGlobalConfirmed, changeGlobalRecovered, changeGlobalDeaths, changeGlobalLastUpdate, changeConfirmed, changeRecovered, changeDeaths } = covidSlice.actions;
+export const { 
+    changeCountry, 
+    changeGlobalConfirmed, 
+    changeGlobalRecovered, 
+    changeGlobalDeaths, 
+    changeGlobalLastUpdate, 
+    changeConfirmed, 
+    changeRecovered, 
+    changeDeaths, 
+    changeLastUpdate 
+} = covidSlice.actions;
 
 export const country = (state) => state.covid.country;
 
@@ -52,5 +68,6 @@ export const globalLastUpdate = (state) => state.covid.globalLastUpdate;
 export const currentConfirmed = (state) => state.covid.currentConfirmed;
 export const currentRecovered = (state) => state.covid.currentRecovered;
 export const currentDeaths = (state) => state.covid.currentDeaths;
+export const currentLastUpdate = (state) => state.covid.currentLastUpdate;
 
 export default covidSlice.reducer

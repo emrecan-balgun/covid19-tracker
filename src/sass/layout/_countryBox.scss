@@ -14,6 +14,7 @@
         @include flexbox($direction: column);
 
         &__country {
+            text-transform: capitalize;
             font-size: $bigger-font-size;
             font-weight: $font-bold;
         }

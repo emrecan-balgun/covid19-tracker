@@ -2,11 +2,10 @@ import { useSelector } from 'react-redux';
 import { globalConfirmed, globalRecovered, globalDeaths } from '../redux/covidSlice';
 
 function Box() {
+    const numberFormat = new Intl.NumberFormat('en-us');
     const confirmed = useSelector(globalConfirmed);
     const recovered = useSelector(globalRecovered);
     const deaths = useSelector(globalDeaths);
-
-    let numberFormat = new Intl.NumberFormat('en-us');
 
     return (
         <div className="boxes">
