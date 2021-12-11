@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { changeConfirmed, changeRecovered, changeDeaths, changeLastUpdate, country, currentConfirmed, currentRecovered, currentDeaths, currentLastUpdate } from '../redux/covidSlice';
 import axios from 'axios';
 import Moment from 'react-moment';
+import Countries from './Countries';
 
 function CountryBox() {
     const numberFormat = new Intl.NumberFormat('en-us');
@@ -14,8 +15,10 @@ function CountryBox() {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        axios(`https://covid19.mathdro.id/api/countries/turkey`)
+        console.log(countryName)
+        axios(`https://covid19.mathdro.id/api/countries/${countryName}`)
         .then(response => dispatchData(response.data))
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     function dispatchData(response) {
@@ -26,6 +29,8 @@ function CountryBox() {
     }
 
     return (
+        <>
+        <Countries />
         <div className="countryBox">
             <div className="countryBox__information">
                 <span className="countryBox__information__country">{countryName}</span>
@@ -44,6 +49,7 @@ function CountryBox() {
                 <span className="countryBox__deaths__name">deaths</span>
             </div>
         </div>
+        </>
     )
 }
 

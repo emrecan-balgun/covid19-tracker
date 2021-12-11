@@ -2,7 +2,6 @@ import React from 'react'
 import Box from './Box'
 // import Table from './Table'
 import Header from './Header'
-import Countries from './Countries'
 import CountryBox from './CountryBox'
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -17,6 +16,7 @@ function Information() {
     useEffect(() => {
         axios('https://covid19.mathdro.id/api')
         .then(response => dispatchData(response.data))
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     function dispatchData(response) {
@@ -33,7 +33,6 @@ function Information() {
             <h2 className="information__title">Global Data</h2>
             <span className="information__time">Last update: <Moment format="Do MMM YYYY, hh:mm:ss">{lastUpdate}</Moment></span>
             <Box />
-            <Countries />
             <CountryBox />
         </div>
         {/* <Table /> */}
