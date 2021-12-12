@@ -1,14 +1,12 @@
 @import '../Helpers/_variables.scss';
 
 .countries {
-    margin-top: 20px;
-    width: 200px;
+    margin: 20px;
+    width: 400px;
     border-radius: $radius;
-    padding: 4px;
 
-    &:focus {
-        min-width: 200px;
-        width: auto;
+    &__item {
+        width: 400px;
     }
 }
 

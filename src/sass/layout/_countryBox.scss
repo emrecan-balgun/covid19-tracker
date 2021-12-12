@@ -2,7 +2,6 @@
 @import '../Helpers/variables';
 
 .countryBox {
-    margin-top: 10px;
     @include flexbox($direction: row, $justify: space-around);
     background: $box4-background;
     width: 900px;

@@ -39,10 +39,12 @@ import { useState, useEffect } from 'react'
 import ReactFlagsSelect from 'react-flags-select';
 import { useDispatch } from 'react-redux'
 import { changeCountry } from '../redux/covidSlice';
+import {countries} from 'country-data';
+
 
 function Countries() {
     const dispatch = useDispatch();
-    const [selected, setSelected] = useState('TR');
+    const [selected, setSelected] = useState('');
 
     useEffect(() => {
         dispatch(changeCountry(selected))
@@ -52,17 +54,13 @@ function Countries() {
     return (
         <ReactFlagsSelect
         selected={selected}
-        onSelect={code => setSelected(code)}
+        onSelect={code => setSelected(countries[code].name)}
         searchable
-    />
-        // <select className="countries" defaultValue={'default'} onChange={e => dispatch(changeCountry(e.target.value))}>
-        //     {
-        //         isLoading ? <option className="countries__loading" value="default">Loading..</option> : <option value="default" disabled  hidden>Global</option>
-        //     }
-        //     {
-        //         countriesArray.map(country => <option key={nanoid()} className="countries__item" value={country.name.common}>{country.name.common}</option>)
-        //     }
-        // </select>
+        // blacklistCountries
+        searchPlaceholder = "Search countries"
+        className="countries"
+        selectButtonClassName="countries__item"
+        />
     )
 }
 
