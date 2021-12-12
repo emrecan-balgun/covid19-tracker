@@ -5,8 +5,6 @@ import axios from 'axios';
 import Moment from 'react-moment';
 import Countries from './Countries';
 
-// import { useAnimateNumber } from 'react-hook-animate-number'
-
 function CountryBox() {
     const numberFormat = new Intl.NumberFormat('en-us');
     const countryName = useSelector(country);
@@ -35,6 +33,7 @@ function CountryBox() {
         }
         
     }
+    
 
     return (
         <>
