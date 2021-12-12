@@ -18,7 +18,7 @@ export const covidSlice = createSlice({
   },
   reducers: {
       changeCountry: (state, action) => {
-          state.value = action.payload;
+          state.country = action.payload;
       },
       changeGlobalConfirmed: (state, action) => {
          state.globalConfirmed = action.payload;

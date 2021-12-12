@@ -14,21 +14,24 @@ function CountryBox() {
     const lastUpdate = useSelector(currentLastUpdate);
     const dispatch = useDispatch();
 
+
     useEffect(() => {
-        // console.log(countryName)
+        console.log(countryName)
         if(countryName !== 'null') {
             axios(`https://covid19.mathdro.id/api/countries/${countryName}`)
             .then(response => dispatchData(response.data))
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
-
+    }, [countryName]);
 
     function dispatchData(response) {
-        dispatch(changeConfirmed(response.confirmed.value));
-        dispatch(changeRecovered(response.recovered.value));
-        dispatch(changeDeaths(response.deaths.value));
-        dispatch(changeLastUpdate(response.lastUpdate));
+        if(response.confirmed) {
+            dispatch(changeConfirmed(response.confirmed.value));
+            dispatch(changeRecovered(response.recovered.value));
+            dispatch(changeDeaths(response.deaths.value));
+            dispatch(changeLastUpdate(response.lastUpdate));
+        }
+        
     }
 
     return (
@@ -36,7 +39,7 @@ function CountryBox() {
         <Countries />
         <div className="countryBox">
             <div className="countryBox__information">
-                <span className="countryBox__information__country">{countryName}</span>
+                <span className="countryBox__information__update">last update</span>
                 <span className="countryBox__information__time"><Moment format="Do MMM YYYY, hh:mm:ss">{lastUpdate}</Moment></span>
             </div>
             <div className="countryBox__confirmed">
