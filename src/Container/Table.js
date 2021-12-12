@@ -1,8 +1,8 @@
 import React from 'react'
 import { Bar
 } from 'react-chartjs-2'
-import { useDispatch, useSelector } from 'react-redux';
-import { changeConfirmed, changeRecovered, changeDeaths, changeLastUpdate, country, currentConfirmed, currentRecovered, currentDeaths, currentLastUpdate, show } from '../redux/covidSlice';
+import { useSelector } from 'react-redux';
+import { currentConfirmed, currentRecovered, currentDeaths } from '../redux/covidSlice';
 
 import {
     Chart,
@@ -76,7 +76,7 @@ function Table() {
     return (
         <div className="chart">
             <Bar data={state}/>
-        </div>
+        </div>      
     )
 }
 
