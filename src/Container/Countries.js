@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 import ReactFlagsSelect from 'react-flags-select';
 import { useDispatch } from 'react-redux'
-import { changeCountry } from '../redux/covidSlice';
-import {countries} from 'country-data';
+import { changeCountry, changeShow } from '../redux/covidSlice';
+import { countries } from 'country-data';
 
 
 function Countries() {
@@ -14,10 +14,15 @@ function Countries() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [selected])
 
+    function deneme(code) {
+        setSelected(countries[code].name)
+        dispatch(changeShow(true));
+    }
+
     return (
         <ReactFlagsSelect
         selected={selected}
-        onSelect={code => setSelected(countries[code].name)}
+        onSelect={code => deneme(code)}
         placeholder = {selected}
         showSelectedLabel={true}
         showOptionLabel={true}
