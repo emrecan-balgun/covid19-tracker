@@ -5,6 +5,7 @@ export const covidSlice = createSlice({
   initialState: {
     country: 'null',
     countries: [],
+    
     globalConfirmed: 0,
     globalRecovered: 0,
     globalDeaths: 0,

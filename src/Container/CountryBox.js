@@ -15,11 +15,14 @@ function CountryBox() {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        console.log(countryName)
-        axios(`https://covid19.mathdro.id/api/countries/${countryName}`)
-        .then(response => dispatchData(response.data))
+        // console.log(countryName)
+        if(countryName !== 'null') {
+            axios(`https://covid19.mathdro.id/api/countries/${countryName}`)
+            .then(response => dispatchData(response.data))
+        }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
+
 
     function dispatchData(response) {
         dispatch(changeConfirmed(response.confirmed.value));
