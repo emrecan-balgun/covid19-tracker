@@ -1,17 +1,18 @@
 import React from 'react'
 import Box from './Box'
-// import Table from './Table'
+import Table from './Table'
 import Header from './Header'
 import CountryBox from './CountryBox'
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { changeGlobalConfirmed, changeGlobalRecovered, changeGlobalDeaths, changeGlobalLastUpdate, globalLastUpdate } from '../redux/covidSlice';
+import { changeGlobalConfirmed, changeGlobalRecovered, changeGlobalDeaths, changeGlobalLastUpdate, globalLastUpdate, show } from '../redux/covidSlice';
 import axios from 'axios';
 import Moment from 'react-moment';
 
 function Information() {
     const dispatch = useDispatch();
     const lastUpdate = useSelector(globalLastUpdate);
+    const isShow = useSelector(show);
 
     useEffect(() => {
         axios('https://covid19.mathdro.id/api')
@@ -35,7 +36,11 @@ function Information() {
             <Box />
             <CountryBox />
         </div>
-        {/* <Table /> */}
+        {
+            isShow 
+            ? <Table />
+            : null
+        }
         </>
     )
 }

@@ -1,6 +1,8 @@
 import React from 'react'
 import { Bar
 } from 'react-chartjs-2'
+import { useDispatch, useSelector } from 'react-redux';
+import { changeConfirmed, changeRecovered, changeDeaths, changeLastUpdate, country, currentConfirmed, currentRecovered, currentDeaths, currentLastUpdate, show } from '../redux/covidSlice';
 
 import {
     Chart,
@@ -57,20 +59,23 @@ import {
 
 
 function Table() {
+    const confirmed = useSelector(currentConfirmed);
+    const recovered = useSelector(currentRecovered);
+    const deaths = useSelector(currentDeaths);
+
     const state = {
         labels: ["Confirmed", "Recovered", "Deaths"],
         datasets:
             [{
                 label: "Infected",
-                backgroundColor: ["red", "green","blue"],
+                backgroundColor: ['#dd6b20', "#319795","#822727"],
                 borderColor: "rgba(0,0,0,0)",
                 borderWidth: "1",
-                data: ["8986377", "0", "78602"]
+                data: [confirmed, recovered, deaths]
             }]
     }
     return (
         <div className="chart">
-            <h1>Chart</h1>
             <Bar data={state}/>
         </div>
     )

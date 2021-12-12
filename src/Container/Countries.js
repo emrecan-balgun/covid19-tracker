@@ -14,7 +14,7 @@ function Countries() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [selected])
 
-    function deneme(code) {
+    function takeAction(code) {
         setSelected(countries[code].name)
         dispatch(changeShow(true));
     }
@@ -22,7 +22,7 @@ function Countries() {
     return (
         <ReactFlagsSelect
         selected={selected}
-        onSelect={code => deneme(code)}
+        onSelect={code => takeAction(code)}
         placeholder = {selected}
         showSelectedLabel={true}
         showOptionLabel={true}
