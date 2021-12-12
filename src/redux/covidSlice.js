@@ -5,6 +5,7 @@ export const covidSlice = createSlice({
   initialState: {
     country: 'null',
     show: false,
+    showChart: false,
     
     globalConfirmed: 0,
     globalRecovered: 0,
@@ -46,6 +47,9 @@ export const covidSlice = createSlice({
       },
       changeShow: (state, action) => {
           state.show = action.payload;
+      },
+      changeShowChart: (state, action) => {
+          state.showChart = action.payload;
       }
   }
 })
@@ -60,12 +64,14 @@ export const {
     changeRecovered, 
     changeDeaths, 
     changeLastUpdate,
-    changeShow
+    changeShow,
+    changeShowChart
 } = covidSlice.actions;
 
 export const country = (state) => state.covid.country;
 export const countries = (state) => state.covid.countries;
 export const show = (state) => state.covid.show;
+export const showChart = (state) => state.covid.showChart;
 
 export const globalConfirmed = (state) => state.covid.globalConfirmed;
 export const globalRecovered = (state) => state.covid.globalRecovered;

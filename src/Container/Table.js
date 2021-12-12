@@ -67,10 +67,9 @@ function Table() {
         labels: ["Confirmed", "Recovered", "Deaths"],
         datasets:
             [{
-                label: "Infected",
+                label: "Confirmed",
                 backgroundColor: ['#dd6b20', "#319795","#822727"],
-                borderColor: "rgba(0,0,0,0)",
-                borderWidth: "1",
+                borderWidth: "0",
                 data: [confirmed, recovered, deaths]
             }]
     }
