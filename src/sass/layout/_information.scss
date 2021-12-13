@@ -16,4 +16,76 @@
         font-size: $small-font-size;
         font-weight: $font-lighter;
     }
+
+    @media screen and (max-width: $smaller-screen) {
+        &__title {
+            font-weight: $font-bold;
+            font-size: $normal-font-size;
+        }
+    
+        &__time {
+            margin-top: -10px;
+            font-size: $extra-smaller-font-size;
+        }
+    }
+
+    @media screen and (min-width: $smaller-screen2) {
+        &__title {
+            font-weight: $font-bold;
+            font-size: $medium-font-size;
+        }
+    
+        &__time {
+            margin-top: -15px;
+            font-size: $small-font-size;
+        }
+    }
+
+    @media screen and (min-width: $small-screen) {
+        &__title {
+            font-weight: $font-bold;
+            font-size: $big-font-size;
+        }
+    
+        &__time {
+            margin-top: -25px;
+            font-size: $small-font-size;
+        }
+    }
+
+    @media screen and (min-width: $medium-screen) {
+        &__title {
+            font-weight: $font-bold;
+            font-size: $bigger-font-size;
+        }
+    
+        &__time {
+            margin-top: -35px;
+            font-size: $small-font-size;
+        }
+    }
+
+    @media screen and (min-width: $large-screen) {
+        &__title {
+            font-weight: $font-bold;
+            font-size: $bigger-font-size;
+        }
+    
+        &__time {
+            margin-top: -35px;
+            font-size: $small-font-size;
+        }
+    }
+
+    @media screen and (min-width: $extra-large-screen) {
+        &__title {
+            font-weight: $font-bold;
+            font-size: $bigger-font-size;
+        }
+    
+        &__time {
+            margin-top: -40px;
+            font-size: $normal-font-size;
+        }
+    }
 }

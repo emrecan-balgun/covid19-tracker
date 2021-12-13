@@ -35,12 +35,12 @@ function Information() {
             <span className="information__time">Last update: <Moment format="Do MMM YYYY, hh:mm:ss">{lastUpdate}</Moment></span>
             <Box />
             <CountryBox />
+            {
+                isShow 
+                ? <Table />
+                : null
+            }
         </div>
-        {
-            isShow 
-            ? <Table />
-            : null
-        }
         </>
     )
 }

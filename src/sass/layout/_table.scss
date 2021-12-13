@@ -2,4 +2,41 @@
 
 .chart {
     margin-top: 30px;
+    width: 300px;
+
+    @media screen and (max-width: $smaller-screen) {
+        & {
+            width: 280px;
+        }
+    }
+
+    @media screen and (min-width: $smaller-screen2) {
+        & {
+            width: 350px;
+        }
+    }
+
+    @media screen and (min-width: $small-screen) {
+        & {
+            width: 500px;
+        }
+    }
+
+    @media screen and (min-width: $medium-screen) {
+        & {
+            width: 700px;
+        }
+    }
+
+    @media screen and (min-width: $large-screen) {
+        & {
+            width: 850px;
+        }
+    }
+
+    @media screen and (min-width: $extra-large-screen) {
+        & {
+            width: 1000px;
+        }
+    }
 }

@@ -23,6 +23,78 @@
         letter-spacing: 0.3rem;
         text-transform: uppercase;
     }
+
+    @media screen and (max-width: $smaller-screen) {
+        & {
+            width: 90%;
+        }
+
+        &__value {
+            font-size: $small-font-size;
+        }
+    
+        &__name {
+            font-size: $extra-smaller-font-size;
+        }
+    }
+
+    @media screen and (min-width: $smaller-screen2) {
+        & {
+            width: 95%;
+        }
+
+        &__value {
+            font-size: $normal-font-size;
+        }
+    
+        &__name {
+            font-size: $smaller-font-size;
+        }
+    }
+
+    @media screen and (min-width: $small-screen) {
+        & {
+            width: 100%;
+        }
+
+        &__value {
+            font-size: $medium-font-size;
+        }
+    
+        &__name {
+            font-size: $small-font-size;
+        }
+    }
+
+    @media screen and (min-width: $medium-screen) {
+        &__value {
+            font-size: $medium-font-size;
+        }
+    
+        &__name {
+            font-size: $small-font-size;
+        }
+    }
+
+    @media screen and (min-width: $large-screen) {
+        &__value {
+            font-size: $big-font-size;
+        }
+    
+        &__name {
+            font-size: $normal-font-size;
+        }
+    }
+
+    @media screen and (min-width: $extra-large-screen) {
+        &__value {
+            font-size: $big-font-size;
+        }
+    
+        &__name {
+            font-size: $normal-font-size;
+        }
+    }
 }
 
 @mixin countryBox() {
@@ -38,5 +110,65 @@
             font-weight: $font-light;
             letter-spacing: 0.3rem;
             text-transform: uppercase;
+        }
+
+        @media screen and (max-width: $smaller-screen) {   
+            &__value {
+                font-size: $normal-font-size;
+            }
+        
+            &__name {
+                font-size: $smaller-font-size;
+            }
+        }
+    
+        @media screen and (min-width: $smaller-screen2) {    
+            &__value {
+                font-size: $medium-font-size;
+            }
+        
+            &__name {
+                font-size: $small-font-size;
+            }
+        }
+    
+        @media screen and (min-width: $small-screen) {
+            &__value {
+                font-size: $medium-font-size;
+            }
+        
+            &__name {
+                font-size: $normal-font-size;
+            }
+        }
+    
+        @media screen and (min-width: $medium-screen) {
+            &__value {
+                font-size: $medium-font-size;
+            }
+        
+            &__name {
+                font-size: $small-font-size;
+            }
+        }
+    
+        @media screen and (min-width: $large-screen) {
+            &__value {
+                font-size: $big-font-size;
+            }
+        
+            &__name {
+                font-size: $normal-font-size;
+            }
+        }
+    
+        @media screen and (min-width: $extra-large-screen) {
+            &__value {
+                font-size: $big-font-size;
+            }
+        
+            &__name {
+                font-size: $normal-font-size;
+            }
         }
 }

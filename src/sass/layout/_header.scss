@@ -17,5 +17,89 @@
         font-weight: $font-lighter;
         font-size: $mediumer-font-size;
     }  
+
+    @media screen and (max-width: $smaller-screen) {
+        &__title {
+            letter-spacing: 1px;
+            font-size: $normal-font-size;
+        }
+
+        &__subtitle {
+            margin-top: -10px;
+            letter-spacing: -1px;
+            font-weight: $font-lighter;
+            font-size: $small-font-size;
+        }
+    }
+
+    @media screen and (min-width: $smaller-screen2) {
+        &__title {
+            letter-spacing: 1px;
+            font-size: $medium-font-size;
+        }
+
+        &__subtitle {
+            margin-top: -15px;
+            letter-spacing: -1px;
+            font-weight: $font-lighter;
+            font-size: $small-font-size;
+        }
+    }
+
+    @media screen and (min-width: $small-screen) {
+        &__title {
+            letter-spacing: 2px;
+            font-size: $big-font-size;
+        }
+
+        &__subtitle {
+            margin-top: -20px;
+            letter-spacing: -1px;
+            font-weight: $font-lighter;
+            font-size: $normal-font-size;
+        }
+    }
+
+    @media screen and (min-width: $medium-screen) {
+        &__title {
+            letter-spacing: 2px;
+            font-size: $bigger-font-size;
+        }
+
+        &__subtitle {
+            margin-top: -30px;
+            letter-spacing: -1px;
+            font-weight: $font-lighter;
+            font-size: $normal-font-size;
+        }
+    }
+
+    @media screen and (min-width: $large-screen) {
+        &__title {
+            letter-spacing: 2px;
+            font-size: $bigger-font-size;
+        }
+
+        &__subtitle {
+            margin-top: -30px;
+            letter-spacing: -1px;
+            font-weight: $font-lighter;
+            font-size: $normal-font-size;
+        }
+    }
+
+    @media screen and (min-width: $extra-large-screen) {
+        &__title {
+            letter-spacing: 2px;
+            font-size: $mega-font-size;
+        }
+
+        &__subtitle {
+            margin-top: -40px;
+            letter-spacing: -1px;
+            font-weight: $font-lighter;
+            font-size: $medium-font-size;
+        }
+    }
 }
 

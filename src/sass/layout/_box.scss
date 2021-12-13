@@ -19,4 +19,52 @@
     &__deaths {
         @include box($background: $box3-background);
     }
+
+    @media screen and (max-width: $smaller-screen) {
+        & {
+            @include flexbox($direction: column);
+            width: 100%;
+            gap: 10px;
+        }
+    }
+
+    @media screen and (min-width: $smaller-screen2) {
+        & {
+            @include flexbox($direction: column);
+            width: 90%;
+            gap: 10px;
+        }
+    }
+
+    @media screen and (min-width: $small-screen) {
+        & {
+            @include flexbox($direction: column);
+            width: 100%;
+            gap: 10px;
+        }
+    }
+
+    @media screen and (min-width: $medium-screen) {
+        & {
+            @include flexbox($direction: row);
+            width: 100%;
+            gap: 10px;
+        }
+    }
+
+    @media screen and (min-width: $large-screen) {
+        & {
+            @include flexbox($direction: row);
+            width: 100%;
+            gap: 10px;
+        }
+    }
+
+    @media screen and (min-width: $extra-large-screen) {
+        & {
+            @include flexbox($direction: row);
+            width: 100%;
+            gap: 20px;
+        }
+    }
 }

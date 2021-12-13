@@ -8,5 +8,71 @@
     &__item {
         width: 400px;
     }
+
+    @media screen and (max-width: $smaller-screen) {
+        & {
+            margin: 20px;
+            width: 260px;
+        }
+    
+        &__item {
+            width: 260px;
+        }
+    }
+
+    @media screen and (min-width: $smaller-screen2) {
+        & {
+            margin: 20px;
+            width: 340px;
+        }
+    
+        &__item {
+            width: 340px;
+        }
+    }
+
+    @media screen and (min-width: $small-screen) {
+        & {
+            margin: 20px;
+            width: 500px;
+        }
+    
+        &__item {
+            width: 500px;
+        }
+    }
+
+    @media screen and (min-width: $medium-screen) {
+        & {
+            margin: 20px;
+            width: 500px;
+        }
+    
+        &__item {
+            width: 500px;
+        }
+    }
+
+    @media screen and (min-width: $large-screen) {
+        & {
+            margin: 20px;
+            width: 500px;
+        }
+    
+        &__item {
+            width: 500px;
+        }
+    }
+
+    @media screen and (min-width: $extra-large-screen) {
+        & {
+            margin: 20px;
+            width: 500px;
+        }
+    
+        &__item {
+            width: 500px;
+        }
+    }
 }
 
