@@ -7,7 +7,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   @include flexbox();
-  background-color: $light-color;
   font-family: 'Poppins', sans-serif;
+  background-color: $light-color;
   color: $light-text-color;
 }

@@ -2,6 +2,13 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Technologies and tools I use
+
+Redux, SASS, Axios, Chart.js, Country-data, Nanoid, React-flags-select, React-moment
+
+## Data From
+[Covid-19 API](https://github.com/mathdroid/covid-19-api).
+
 ## Available Scripts
 
 In the project directory, you can run:

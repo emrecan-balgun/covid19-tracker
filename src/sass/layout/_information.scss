@@ -5,13 +5,11 @@
     @include flexbox($direction: column);
 
     &__title {
-        color: black;
         font-weight: $font-bold;
         font-size: $bigger-font-size;
     }
 
     &__time {
-        color: black;
         margin-top: -40px;
         font-size: $small-font-size;
         font-weight: $font-lighter;

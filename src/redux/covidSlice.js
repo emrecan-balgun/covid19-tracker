@@ -5,7 +5,6 @@ export const covidSlice = createSlice({
   initialState: {
     country: 'null',
     show: false,
-    darkMode: false,
 
     globalConfirmed: 0,
     globalRecovered: 0,
@@ -48,9 +47,6 @@ export const covidSlice = createSlice({
       changeShow: (state, action) => {
           state.show = action.payload;
       },
-      changeDarkMode: (state, action) => {
-          state.darkMode = action.payload;
-      }
   }
 })
 
@@ -64,13 +60,11 @@ export const {
     changeRecovered, 
     changeDeaths, 
     changeLastUpdate,
-    changeShow,
-    changeDarkMode
+    changeShow
 } = covidSlice.actions;
 
 export const country = (state) => state.covid.country;
 export const show = (state) => state.covid.show;
-export const darkMode = (state) => state.covid.darkMode;
 
 export const globalConfirmed = (state) => state.covid.globalConfirmed;
 export const globalRecovered = (state) => state.covid.globalRecovered;
