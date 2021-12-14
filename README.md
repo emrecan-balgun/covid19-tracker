@@ -6,6 +6,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Redux, SASS, Axios, Chart.js, Country-data, React-flags-select, React-moment, Use-count-up
 
+## Photos
+![v2](public/main.jpg)
+![v2](public/main2.jpg)
+
 ## Data From
 [Covid-19 API](https://github.com/mathdroid/covid-19-api).
 
