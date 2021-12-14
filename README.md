@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Technologies and Tools I use
 
-Redux, SASS, Axios, Chart.js, Country-data, Nanoid, React-flags-select, React-moment, Use-count-up
+Redux, SASS, Axios, Chart.js, Country-data, React-flags-select, React-moment, Use-count-up
 
 ## Data From
 [Covid-19 API](https://github.com/mathdroid/covid-19-api).
