@@ -1,0 +1,19 @@
+@import '../Helpers/variables';
+@import '../Helpers/mixins';
+
+.darkMode {
+    @include flexbox();
+    background-color: transparent;
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    border-radius: $radius;
+    border: 1px solid #ccc;
+    padding: 5px;
+    cursor: pointer;
+    
+    &__image {
+        height: 50px;
+        width: 50px;
+    }
+}
