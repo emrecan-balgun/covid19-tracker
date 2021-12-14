@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Technologies and tools I use
+## Technologies and Tools I use
 
 Redux, SASS, Axios, Chart.js, Country-data, Nanoid, React-flags-select, React-moment
 
