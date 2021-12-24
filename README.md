@@ -9,6 +9,8 @@ Redux, SASS, Axios, Chart.js, Country-data, React-flags-select, React-moment, Us
 ## Photos
 ![v2](public/main.jpg)
 ![v2](public/main2.jpg)
+![v2](public/mobile1.jpg)
+![v2](public/mobile2.jpg)
 
 ## Data From
 [Covid-19 API](https://github.com/mathdroid/covid-19-api).
