@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Live
+[Link](https://covid19-tracker-lime.vercel.app)
+
+
 ## Technologies and Tools I use
 
 Redux, SASS, Axios, Chart.js, Country-data, React-flags-select, React-moment, Use-count-up
